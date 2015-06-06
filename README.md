@@ -9,3 +9,4 @@ Current Algorithms:
 
 * Python
   * DFS
+  * BFS
