@@ -44,7 +44,7 @@ def dfs(graph, root):
                 if v not in visited:
                     parent[v] = u
                     cost[v] = cost[u] + w
-                pending.append(v)
+                    pending.append(v)
 
     return parent, cost
 
