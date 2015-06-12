@@ -11,7 +11,7 @@
 
     Time Complexity of Operations:
         - Construct Heap from list : Θ( n )
-        - Insert                   : O( logn)
+        - Insert                   : O( logn )
         - Find First Item          : O( 1 )
         - Find & Remove First Item : O( logn )
         - Update Priority          : O( logn )
