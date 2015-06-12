@@ -26,6 +26,9 @@
         Mst
             The edges selected in the MST.
             Each edge is in the form (From, To).
+
+    Complexity
+        Θ( |E| log(|E|) )
 """
 
 from union_find import UnionFind
