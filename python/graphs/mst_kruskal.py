@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    Kruskal MST Algorithm
+    Kruskal's MST Algorithm
     ---------------------
 
     Offers two functions that calculate the Minimum Spanning Tree of an undirected graph.

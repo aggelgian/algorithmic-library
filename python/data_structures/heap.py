@@ -60,6 +60,7 @@ class Heap:
         last = self.A.pop()
         if self.n > 0:
             self.A[1] = last
+            self.pos[last[0]] = 1
             self.combine(1)
         return first[0]
 
@@ -107,6 +108,13 @@ class Heap:
             self.insert_loop(pos, pos // 2)  # Up heapify
         else:
             self.combine(pos)  # Down heapify
+
+    def get_priority(self, elem):
+        """
+        Gets the priority of an element.
+        """
+        pos = self.pos[elem]
+        return self.A[pos][1]
 
 
 class MinHeap(Heap):
