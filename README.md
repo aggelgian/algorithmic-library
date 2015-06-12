@@ -18,3 +18,4 @@ Current Algorithms:
   * [BFS](https://en.wikipedia.org/wiki/Breadth-first_search)
   * [Kruskal's MST algorithm](https://en.wikipedia.org/wiki/Kruskal's_algorithm)
   * [Prim's MST algorith](https://en.wikipedia.org/wiki/Prim's_algorithm)
+  * [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm)
