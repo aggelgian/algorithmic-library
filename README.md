@@ -5,6 +5,11 @@ algorithmic-library
 
 The goal of this project is to create a library of algorithms.
 
+Current Data Structures:
+
+* Python
+  * Union-Find
+
 Current Algorithms:
 
 * Python

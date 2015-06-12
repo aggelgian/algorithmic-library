@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIRS="graphs"
+DIRS="graphs data_structures"
 
 for d in $DIRS
 do
