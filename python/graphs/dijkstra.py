@@ -4,7 +4,8 @@
     Dijkstra's ALgorithm
     --------------------
 
-    Finds the shortest paths between nodes in a graph
+    Finds the shortest paths between nodes in a graph.
+    It requires non-negative weights.
 
     Parameters:
     Graph
