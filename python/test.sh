@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIRS="graphs data_structures"
+DIRS="graphs data_structures utils"
 
 # Add the python files to python's paths.
 for d in $DIRS
