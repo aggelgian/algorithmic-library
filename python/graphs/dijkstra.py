@@ -17,7 +17,7 @@
     Cost
         A dictionary that maps vertices to the cost of the shortest path from the root to them.
     Parent
-        A dictionary tham maps vertices to their parent in the shortest path from the root to them.
+        A dictionary that maps vertices to their parent in the shortest path from the root to them.
         It is needed to reconstruct the shortest path.
 
     Complexity

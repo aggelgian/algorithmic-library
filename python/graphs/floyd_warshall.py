@@ -14,6 +14,10 @@
     Returns:
     Cost
         A dictionary where the element Cost[u][v] denotes the cost of the shortest path from u to v.
+    Parent
+        A dictionary where each row i is a dictionary that maps vertices to their parent in
+        the shortest path from i to them.
+        It is needed to reconstruct the shortest paths.
 
     Time Complexity:
         Θ( n^3 )
@@ -25,28 +29,27 @@ def floyd_warshall(graph):
     vertices = graph.keys()
     n = len(vertices)
 
-    # Initialize the cost matrix.
+    # Initialize the cost & parent matrices.
     inf = float("inf")
-    cost = dict()
-    cost[0] = dict()
+    cost, parent = dict(), dict()
     for u in vertices:
-        cost[0][u] = collections.defaultdict(lambda: inf)
+        cost[u] = collections.defaultdict(lambda: inf)
+        parent[u] = collections.defaultdict(lambda: None)
         neighbours = graph[u]
-        for v in vertices:
-            if v in neighbours:
-                cost[0][u][v] = neighbours[v]
-        cost[0][u][u] = 0
+        for (v, w) in neighbours.items():
+            cost[u][v] = w
+            next[u][v] = u
+        cost[u][u] = 0
 
     # Run the algorithm.
     for k in range(1, n + 1):
-        cost[k % 2] = dict()
         for i in range(1, n + 1):
-            cost[k % 2][i] = collections.defaultdict(lambda: inf)
             for j in range(1, n + 1):
-                cost[k % 2][i][j] = min( cost[(k-1) % 2][i][j],
-                                         cost[(k-1) % 2][i][k] + cost[(k-1) % 2][k][j] )
+                if cost[i][j] > cost[i][k] + cost[k][j]:
+                    cost[i][j] = cost[i][k] + cost[k][j]
+                    parent[i][j] = next[k][j]
 
-    return cost[n % 2]
+    return cost, parent
 
 
 if __name__ == "__main__":
@@ -57,9 +60,14 @@ if __name__ == "__main__":
     graph[3] = {4: 2}
     graph[4] = {5: 4}
     graph[5] = {1: 3, 2: 5}
-    cost = floyd_warshall(graph)
+    cost, parent = floyd_warshall(graph)
     assert cost[1] == collections.defaultdict(lambda: inf, {1: 0, 2: 1, 3: 0, 4: -2, 5: 2})
     assert cost[2] == collections.defaultdict(lambda: inf, {1: 8, 2: 0, 3: -1, 4: 1, 5: 5})
     assert cost[3] == collections.defaultdict(lambda: inf, {1: 9, 2: 10, 3: 0, 4: 2, 5: 6})
     assert cost[4] == collections.defaultdict(lambda: inf, {1: 7, 2: 8, 3: 7, 4: 0, 5: 4})
     assert cost[5] == collections.defaultdict(lambda: inf, {1: 3, 2: 4, 3: 3, 4: 1, 5: 0})
+    assert parent[1] == collections.defaultdict(lambda: None, {2: 1, 3: 2, 4: 1, 5: 4})
+    assert parent[2] == collections.defaultdict(lambda: None, {1: 5, 3: 2, 4: 3, 5: 4})
+    assert parent[3] == collections.defaultdict(lambda: None, {1: 5, 2: 1, 4: 3, 5: 4})
+    assert parent[4] == collections.defaultdict(lambda: None, {1: 5, 2: 1, 3: 2, 5: 4})
+    assert parent[5] == collections.defaultdict(lambda: None, {1: 5, 2: 1, 3: 2, 4: 1})
