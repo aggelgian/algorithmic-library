@@ -39,14 +39,14 @@ def floyd_warshall(graph):
 
     # Run the algorithm.
     for k in range(1, n + 1):
-        cost[k] = dict()
+        cost[k % 2] = dict()
         for i in range(1, n + 1):
-            cost[k][i] = collections.defaultdict(lambda: inf)
+            cost[k % 2][i] = collections.defaultdict(lambda: inf)
             for j in range(1, n + 1):
-                cost[k][i][j] = min( cost[k-1][i][j],
-                                     cost[k-1][i][k] + cost[k-1][k][j] )
+                cost[k % 2][i][j] = min( cost[(k-1) % 2][i][j],
+                                         cost[(k-1) % 2][i][k] + cost[(k-1) % 2][k][j] )
 
-    return cost[n]
+    return cost[n % 2]
 
 
 if __name__ == "__main__":
