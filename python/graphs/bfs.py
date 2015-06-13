@@ -22,12 +22,11 @@
     Cost
         A dict that maps each vertex to the cost of the path that starts at
         the root at ends at the vertex. If the vertex is not reachable, then
-        the cost is "inf".
+        the cost is infinite.
 """
 
 import collections
 
-INF = "inf"
 NOT_SEEN = 0
 SEEN = 1
 EXPLORED = 2
@@ -37,7 +36,8 @@ def dfs(graph, root):
     parent = {root: None}
     visited = collections.defaultdict(lambda: NOT_SEEN)
     visited[root] = SEEN
-    cost = collections.defaultdict(lambda: INF)
+    inf = float("inf")
+    cost = collections.defaultdict(lambda: inf)
     cost[root] = 0
 
     while len(pending):

@@ -55,6 +55,7 @@ def dijkstra(graph, root):
 
 
 if __name__ == "__main__":
+    inf = float("inf")
     graph = dict()
     graph[1] = {2: 7, 3: 9, 6: 14}
     graph[2] = {1: 7, 3: 10, 4: 15}

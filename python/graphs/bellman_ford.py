@@ -54,6 +54,7 @@ def bellman_ford(graph, root):
 
 
 if __name__ == "__main__":
+    inf = float("inf")
     graph = dict()
     graph['s'] = {'a': 6, 'b': 8}
     graph['a'] = {'c': -5, 'd': 4}
