@@ -19,3 +19,4 @@ Current Algorithms:
   * [Kruskal's MST algorithm](https://en.wikipedia.org/wiki/Kruskal's_algorithm)
   * [Prim's MST algorith](https://en.wikipedia.org/wiki/Prim's_algorithm)
   * [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm)
+  * [Bellman - Ford algorith](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
