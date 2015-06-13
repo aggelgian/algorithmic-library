@@ -38,7 +38,7 @@ def floyd_warshall(graph):
         neighbours = graph[u]
         for (v, w) in neighbours.items():
             cost[u][v] = w
-            next[u][v] = u
+            parent[u][v] = u
         cost[u][u] = 0
 
     # Run the algorithm.
@@ -47,7 +47,7 @@ def floyd_warshall(graph):
             for j in range(1, n + 1):
                 if cost[i][j] > cost[i][k] + cost[k][j]:
                     cost[i][j] = cost[i][k] + cost[k][j]
-                    parent[i][j] = next[k][j]
+                    parent[i][j] = parent[k][j]
 
     return cost, parent
 
