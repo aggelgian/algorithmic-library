@@ -4,6 +4,8 @@
     Tarjan's Strongly Connected Components Algorithm
     ================================================
 
+    Finds the strongly connected components of a graph.
+
     Parameters:
     Graph
         The graph as an adjacency list.
