@@ -21,3 +21,4 @@ Current Algorithms:
   * [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm)
   * [Bellman - Ford algorith](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
   * [Floyd - Warshall algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
+  * [Tarjan's SSC algorithm](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm)
