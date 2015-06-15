@@ -11,9 +11,10 @@ done
 # Run the tests.
 for d in $DIRS
 do
+  echo "$d"
   for f in "$d"/*.py
   do
-    echo "Running $f ..."
+    echo "  TEST $f"
     python3 "$f"
   done
 done
