@@ -5,13 +5,20 @@ algorithmic-library
 
 The goal of this project is to create a library of algorithms.
 
-Current Data Structures:
+Licence
+-------
+
+This code is distributed under the MPL2. Please see the COPYING file for details.
+
+Data Structures
+---------------
 
 * Python
   * [Union-Find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
   * [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) (Priority Queue with Updatable Priorities)
 
-Current Algorithms:
+Algorithms
+----------
 
 * Python
   * [DFS](https://en.wikipedia.org/wiki/Depth-first_search)
