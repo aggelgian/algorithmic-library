@@ -18,6 +18,7 @@ Data Structures
   * [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) (Priority Queue with Updatable Priorities)
   * [Trie](https://en.wikipedia.org/?title=Trie)
   * [Binary Indexed Tree](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/)
+  * [Segment Tree](https://en.wikipedia.org/wiki/Segment_tree)
 
 Algorithms
 ----------
