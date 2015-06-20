@@ -13,6 +13,8 @@
     - SUM X Y
         Finds the sum from position X to position Y
 
+    The binary indexed tree is 1-indexed.
+
     Time Complexity
         All the operations cost O( logn ), where n is the number of bits of the position.
 """
