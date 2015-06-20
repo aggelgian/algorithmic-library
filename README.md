@@ -16,6 +16,7 @@ Data Structures
 * Python
   * [Union-Find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
   * [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) (Priority Queue with Updatable Priorities)
+  * [Trie](https://en.wikipedia.org/?title=Trie)
 
 Algorithms
 ----------
