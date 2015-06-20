@@ -41,9 +41,8 @@ class TrieNode:
         self.prefixes -= 1
 
 class Trie:
-    def __init__(self):
+    def __init__(self, alphabet = "abcefghijklmnopqrstuvwxyz"):
         # Map the letters to list indices.
-        alphabet = "abcefghijklmnopqrstuvwxyz"
         self.letters = {}
         i = 0
         for l in alphabet:
